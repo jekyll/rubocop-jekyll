@@ -55,6 +55,8 @@ Metrics/PerceivedComplexity:
 
 Naming/FileName:
   Enabled: false
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: optional
 Naming/UncommunicativeMethodParamName:
   AllowedNames:
     - _
