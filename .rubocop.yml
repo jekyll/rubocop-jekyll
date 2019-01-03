@@ -35,7 +35,7 @@ Metrics/AbcSize:
   Max: 21
 Metrics/BlockLength:
   Exclude:
-    - spec/**/*
+    - !ruby/regexp /^spec/
 Metrics/ClassLength:
   Max: 240
 Metrics/LineLength:
