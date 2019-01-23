@@ -4,7 +4,7 @@ $LOAD_PATH.unshift File.expand_path("lib", __dir__)
 
 Gem::Specification.new do |s|
   s.name        = "rubocop-jekyll"
-  s.version     = "0.5.1"
+  s.version     = "0.6.0"
   s.authors     = ["Ashwin Maroli"]
   s.email       = ["ashmaroli@gmail.com"]
   s.homepage    = "https://github.com/ashmaroli/rubocop-jekyll"
