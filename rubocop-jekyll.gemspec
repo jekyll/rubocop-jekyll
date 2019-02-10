@@ -4,7 +4,7 @@ $LOAD_PATH.unshift File.expand_path("lib", __dir__)
 
 Gem::Specification.new do |s|
   s.name        = "rubocop-jekyll"
-  s.version     = "0.6.0"
+  s.version     = "0.7.0"
   s.authors     = ["Ashwin Maroli"]
   s.email       = ["ashmaroli@gmail.com"]
   s.homepage    = "https://github.com/ashmaroli/rubocop-jekyll"
@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = ">= 2.3.0"
 
-  s.add_runtime_dependency "rubocop", ">= 0.57.2", "< 0.64.0"
+  s.add_runtime_dependency "rubocop", ">= 0.57.2", "< 0.65.0"
 end
