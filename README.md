@@ -23,12 +23,12 @@ or if you prefer Bundler, add it to your `Gemfile` or `gemspec`
 ```ruby
 # Gemfile
 
-gem "rubocop-jekyll", "~> 0.7.0"
+gem "rubocop-jekyll", "~> 0.8.0"
 ```
 ```ruby
 # <plugin>.gemspec
 
-spec.add_development_dependency "rubocop-jekyll", "~> 0.7.0"
+spec.add_development_dependency "rubocop-jekyll", "~> 0.8.0"
 ```
 and run `bundle install`
 
