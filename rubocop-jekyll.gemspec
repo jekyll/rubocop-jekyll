@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = "0.9.0"
   s.authors     = ["Ashwin Maroli"]
   s.email       = ["ashmaroli@gmail.com"]
-  s.homepage    = "https://github.com/ashmaroli/rubocop-jekyll"
+  s.homepage    = "https://github.com/jekyll/rubocop-jekyll"
   s.license     = "MIT"
   s.summary     = "Code style check for Jekyll and Jekyll plugins"
   s.description = "A RuboCop extension to enforce common code style in Jekyll and Jekyll plugins"
