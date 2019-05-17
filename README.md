@@ -4,7 +4,7 @@ A RuboCop extension to enforce common code style in Jekyll and Jekyll plugins.
 
 
 [![Gem Version](https://img.shields.io/gem/v/rubocop-jekyll.svg?label=Latest%20Release)][rubygems]
-[![RuboCop Support](https://img.shields.io/badge/Rubocop%20Support-0.57.2%20--%200.66.x-green.svg)][rubocop-releases]
+[![RuboCop Support](https://img.shields.io/badge/Rubocop%20Support-0.68.0%20--%200.69.x-green.svg)][rubocop-releases]
 
 [rubygems]: https://rubygems.org/gems/rubocop-jekyll
 [rubocop-releases]: https://github.com/rubocop-hq/rubocop/releases

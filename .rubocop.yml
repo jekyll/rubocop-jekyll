@@ -1,3 +1,6 @@
+require:
+  - rubocop-performance
+
 AllCops:
   TargetRubyVersion: 2.3
   Exclude:
@@ -13,9 +16,9 @@ Layout/AlignHash:
   EnforcedHashRocketStyle: table
 Layout/IndentationWidth:
   Severity: error
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
