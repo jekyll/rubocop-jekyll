@@ -11,14 +11,16 @@ AllCops:
     - vendor/**/*
     - tmp/**/*
 
-
-Layout/AlignHash:
+Layout/LineLength:
+  Max: 100
+  Severity: warning
+Layout/HashAlignment:
   EnforcedHashRocketStyle: table
 Layout/IndentationWidth:
   Severity: error
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -41,9 +43,6 @@ Metrics/BlockLength:
     - !ruby/regexp /^spec/
 Metrics/ClassLength:
   Max: 240
-Metrics/LineLength:
-  Max: 100
-  Severity: warning
 Metrics/MethodLength:
   CountComments: false
   Max: 20
@@ -79,6 +78,12 @@ Style/GuardClause:
 Style/HashSyntax:
   EnforcedStyle: hash_rockets
   Severity: error
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
 Style/ModuleFunction:
   Enabled: false
 Style/MultilineTernaryOperator:
@@ -108,3 +113,5 @@ Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
+Style/WordArray:
+  EnforcedStyle: brackets
