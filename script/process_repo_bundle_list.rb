@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-path = ARGV[0]
+path, root = ARGV.values_at(0, 1)
 return unless path
 
 text = File.read(File.join(path, "repo-bundle-list.tmp"))
@@ -18,6 +18,6 @@ File.open(File.join(path, 'Gemfile'), "wb") do |f|
   # rubocop:disable Bundler/OrderedGems
   TXT
   data.each { |name, version| f.puts("gem #{name.inspect}, #{version.inspect}") }
-  f.puts('gem "rubocop-jekyll", :github => "jekyll/rubocop-jekyll"')
+  f.puts(%(gem "rubocop-jekyll", :path => #{root.inspect}))
   f.puts "# rubocop:enable Bundler/OrderedGems"
 end
