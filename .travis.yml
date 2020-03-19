@@ -24,6 +24,14 @@ env:
 - NWO="jekyll/jekyll-sitemap"
 - NWO="jekyll/jekyll-watch"
 - NWO="benbalter/jekyll-avatar"
+matrix:
+  # These repos are currently locked to rubocop-jekyll-0.10.x or older
+  allow_failures:
+    - env: NWO="jekyll/jekyll-admin"
+    - env: NWO="jekyll/jekyll-import"
+    - env: NWO="jekyll/jekyll-redirect-from"
+    - env: NWO="jekyll/jekyll-watch"
+    - env: NWO="benbalter/jekyll-avatar"
 branches:
   only:
   - master
