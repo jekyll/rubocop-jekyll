@@ -46,7 +46,7 @@ BUNDLE_GEMFILE=$(pwd)/Gemfile
 BUNDLE_PATH=$(pwd)/vendor/bundle
 bundle install --quiet
 bundle list > repo-bundle-list.tmp
-ruby $ROOT/script/process_repo_bundle_list.rb $clone_location
+ruby $ROOT/script/process_repo_bundle_list.rb $clone_location $ROOT
 echo -e " Done!"
 
 echo -e "$(gogreen 'Setting up bundle for CLONE LOCATION...')\c"

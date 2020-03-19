@@ -24,5 +24,8 @@ env:
 - NWO="jekyll/jekyll-sitemap"
 - NWO="jekyll/jekyll-watch"
 - NWO="benbalter/jekyll-avatar"
+branches:
+  only:
+  - master
 notifications:
   email: false
