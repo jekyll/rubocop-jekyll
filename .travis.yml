@@ -1,0 +1,28 @@
+language: ruby
+rvm: 2.4.6
+cache:
+  directories:
+  - /home/travis/.rvm/
+  - vendor/bundle
+before_install:
+- gem update --system --no-document
+- gem install bundler --no-document
+script: script/cibuild $NWO
+env:
+- NWO="jekyll/jekyll-admin"
+- NWO="jekyll/jekyll-archives"
+- NWO="jekyll/jekyll-coffeescript"
+- NWO="jekyll/jekyll-commonmark"
+- NWO="jekyll/jekyll-compose"
+- NWO="jekyll/jekyll-feed"
+- NWO="jekyll/github-metadata"
+- NWO="jekyll/jekyll-import"
+- NWO="jekyll/jekyll-mentions"
+- NWO="jekyll/jekyll-redirect-from"
+- NWO="jekyll/jekyll-sass-converter"
+- NWO="jekyll/jekyll-seo-tag"
+- NWO="jekyll/jekyll-sitemap"
+- NWO="jekyll/jekyll-watch"
+- NWO="benbalter/jekyll-avatar"
+notifications:
+  email: false

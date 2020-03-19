@@ -1,0 +1,58 @@
+#!/bin/bash -e
+
+repo_nwo="$1"
+if test -z "$repo_nwo"; then
+  echo "usage: $0 owner/repo"
+  exit 1
+fi
+
+ROOT="$(pwd)"
+TMPDIR="$ROOT/tmp"
+
+if [[ $1 == http* ]]; then
+  clone_url="$1"
+  clone_location="$TMPDIR/enterprise"
+  rm -rf "$clone_location"
+else
+  clone_url="https://github.com/$repo_nwo"
+  clone_location="$TMPDIR/$repo_nwo"
+fi
+
+# Color helpers
+cyanize() { echo "\e[36m$1\e[0m"; }
+gogreen() { echo "\e[32m\e[1m$1\e[0m"; }
+
+# Let's start!
+echo ""
+echo -e "      REPO URL: $(cyanize $clone_url)"
+echo -e "CLONE LOCATION: $(cyanize $clone_location)"
+
+if ! [ -d $clone_location ]; then
+  echo ""
+  echo -e "$(gogreen 'Cloning REPO URL into CLONE LOCATION...')\c"
+  mkdir -p $clone_location
+  git clone --recurse-submodules -q "$clone_url" "$clone_location"
+  echo -e " Done!"
+fi
+
+mkdir -p $clone_location/vendor/bundle
+cp -r $ROOT/vendor $clone_location
+
+echo -e "$(gogreen 'CD into CLONE LOCATION...')"
+cd $clone_location
+
+echo -e "$(gogreen 'Setting up Gemfile...')\c"
+BUNDLE_GEMFILE=$(pwd)/Gemfile
+BUNDLE_PATH=$(pwd)/vendor/bundle
+bundle install --quiet
+bundle list > repo-bundle-list.tmp
+ruby $ROOT/script/process_repo_bundle_list.rb $clone_location
+echo -e " Done!"
+
+echo -e "$(gogreen 'Setting up bundle for CLONE LOCATION...')\c"
+bundle install --quiet
+echo -e " Done!"
+
+echo -e "$(gogreen 'Running RuboCop in CLONE LOCATION...')"
+echo "RuboCop $(bundle exec rubocop --version)"
+bundle exec rubocop
