@@ -1,4 +1,4 @@
-tmp/
+.tmp/
 vendor/
 *.gem
 Gemfile.lock
