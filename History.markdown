@@ -1,12 +1,12 @@
 ## HEAD
 
+### Minor Enhancements
+
+  * Have AllCops target Ruby 2.4 in `.rubocop.yml` (#19)
+
 ### Development Fixes
 
   * chore(ci): Test against Ruby 2.5 (#18)
-
-### Bug Fixes
-
-  * chore: Target Ruby 2.4 (#19)
 
 ## 0.11.0 / 2020-03-19
 
