@@ -4,7 +4,7 @@ A RuboCop extension to enforce common code style in Jekyll and Jekyll plugins.
 
 
 [![Gem Version](https://img.shields.io/gem/v/rubocop-jekyll.svg?label=Latest%20Release)][rubygems]
-[![RuboCop Support](https://img.shields.io/badge/Rubocop%20Support-0.68.0%20--%200.80.x-green.svg)][rubocop-releases]
+[![RuboCop Support](https://img.shields.io/badge/RuboCop%20Support-1.18.x-green.svg)][rubocop-releases]
 
 [rubygems]: https://rubygems.org/gems/rubocop-jekyll
 [rubocop-releases]: https://github.com/rubocop-hq/rubocop/releases
@@ -23,12 +23,12 @@ or if you prefer Bundler, add it to your `Gemfile` or `gemspec`
 ```ruby
 # Gemfile
 
-gem "rubocop-jekyll", "~> 0.11.0"
+gem "rubocop-jekyll", "~> 0.12.0"
 ```
 ```ruby
 # <plugin>.gemspec
 
-spec.add_development_dependency "rubocop-jekyll", "~> 0.11.0"
+spec.add_development_dependency "rubocop-jekyll", "~> 0.12.0"
 ```
 and run `bundle install`
 

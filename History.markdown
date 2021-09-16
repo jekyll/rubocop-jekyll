@@ -1,4 +1,4 @@
-## HEAD
+## 0.12.0 / 2021-09-16
 
 ### Minor Enhancements
 
