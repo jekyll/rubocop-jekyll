@@ -2,6 +2,7 @@
 
 ### Minor Enhancements
 
+  * Require RuboCop v1.18.x (#22)
   * Have AllCops target Ruby 2.4 in `.rubocop.yml` (#19)
 
 ### Development Fixes
