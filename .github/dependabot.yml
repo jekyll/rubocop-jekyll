@@ -5,6 +5,7 @@
 version: 2
 updates:
 - package-ecosystem: bundler
+  versioning-strategy: increase # always increase; this ensures we are just using one version of rubocop
   directory: "/"
   schedule:
     interval: daily
