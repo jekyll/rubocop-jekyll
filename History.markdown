@@ -3,6 +3,7 @@
 ### Development Fixes
 
   * Update .github/dependabot.yml (#24)
+  * Update .github/workflows/release.yaml (#26)
 
 ## 0.12.0 / 2021-09-16
 
