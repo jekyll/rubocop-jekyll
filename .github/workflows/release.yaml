@@ -5,8 +5,8 @@ on:
   push:
     branches:
       - main
-	  - master
-	  - ".*-stable"
+      - master
+      - ".*-stable"
     paths:
       - "lib/**/version.rb"
 
@@ -31,6 +31,6 @@ jobs:
       - name: Build and Publish Gem
         uses: ashmaroli/release-gem@dist
         with:
-          gemspec_name: GitHubRepository.GemspecName is not implemented yet
+          gemspec_name: rubocop-jekyll
         env:
           GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_GEM_PUSH_API_KEY }}
