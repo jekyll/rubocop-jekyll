@@ -1,3 +1,9 @@
+## HEAD
+
+### Development Fixes
+
+  * Update .github/dependabot.yml (#24)
+
 ## 0.12.0 / 2021-09-16
 
 ### Minor Enhancements
