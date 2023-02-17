@@ -11,8 +11,14 @@ AllCops:
     - vendor/**/*
     - tmp/**/*
 
+
 Gemspec/DeprecatedAttributeAssignment:
   Enabled: true
+Gemspec/DevelopmentDependencies:
+  Enabled: false # we don't care where dev dependencies are placed
+Gemspec/RequireMFA:
+  Enabled: false # jekyllbot auto-releases :|
+
 
 Layout/BeginEndAlignment:
   Enabled: true
@@ -30,6 +36,12 @@ Layout/HashAlignment:
   EnforcedHashRocketStyle: table
 Layout/IndentationWidth:
   Severity: error
+Layout/LineContinuationLeadingSpace:
+  Enabled: true
+Layout/LineContinuationSpacing:
+  Enabled: true
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: true
 Layout/LineLength:
   Max: 100
   Severity: warning
@@ -47,9 +59,15 @@ Layout/SpaceInsideHashLiteralBraces:
 
 Lint/AmbiguousAssignment:
   Enabled: true
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: true
+Lint/AmbiguousRange:
+  Enabled: true
 Lint/BinaryOperatorWithIdenticalOperands:
   Enabled: true
 Lint/ConstantDefinitionInBlock:
+  Enabled: true
+Lint/ConstantOverwrittenInRescue:
   Enabled: true
 Lint/DeprecatedConstants:
   Enabled: true
@@ -58,6 +76,8 @@ Lint/DeprecatedOpenSSLConstant:
 Lint/DuplicateBranch:
   Enabled: true
 Lint/DuplicateElsifCondition:
+  Enabled: true
+Lint/DuplicateMagicComment:
   Enabled: true
 Lint/DuplicateRegexpCharacterClassElement:
   Enabled: true
@@ -73,11 +93,15 @@ Lint/EmptyConditionalBody:
   Enabled: true
 Lint/EmptyFile:
   Enabled: true
+Lint/EmptyInPattern:
+  Enabled: true
 Lint/FloatComparison:
   Enabled: true
 Lint/HashCompareByIdentity:
   Enabled: true
 Lint/IdentityComparison:
+  Enabled: true
+Lint/IncompatibleIoSelectWithFiberScheduler:
   Enabled: true
 Lint/LambdaWithoutLiteralBlock:
   Enabled: true
@@ -88,6 +112,8 @@ Lint/MixedRegexpCaptureTypes:
 Lint/NestedPercentLiteral:
   Enabled: true
 Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+Lint/NonAtomicFileOperation:
   Enabled: true
 Lint/NumberedParameterAssignment:
   Enabled: true
@@ -100,6 +126,12 @@ Lint/RaiseException:
 Lint/RedundantDirGlobSort:
   Enabled: true
 Lint/RedundantSafeNavigation:
+  Enabled: true
+Lint/RefinementImportMethods:
+  Enabled: true
+Lint/RequireRangeParentheses:
+  Enabled: true
+Lint/RequireRelativeSelfPath:
   Enabled: true
 Lint/SelfAssignment:
   Enabled: true
@@ -124,6 +156,10 @@ Lint/UnreachableCode:
 Lint/UnreachableLoop:
   Enabled: true
 Lint/UselessMethodDefinition:
+  Enabled: true
+Lint/UselessRescue:
+  Enabled: true
+Lint/UselessRuby2Keywords:
   Enabled: true
 Lint/UselessTimes:
   Enabled: true
@@ -150,8 +186,12 @@ Metrics/PerceivedComplexity:
   Max: 8
 
 
+Naming/BlockForwarding:
+  Enabled: true
 Naming/FileName:
   Enabled: false
+Naming/HeredocDelimiterNaming:
+  Enabled: true
 Naming/MemoizedInstanceVariableName:
   EnforcedStyleForLeadingUnderscores: optional
 
@@ -168,11 +208,19 @@ Performance/ChainArrayAllocation:
   Enabled: true
 Performance/CollectionLiteralInLoop:
   Enabled: true
+Performance/ConcurrentMonotonicTime:
+  Enabled: true
 Performance/ConstantRegexp:
+  Enabled: true
+Performance/MapCompact:
   Enabled: true
 Performance/MethodObjectAsBlock:
   Enabled: true
+Performance/RedundantEqualityComparisonBlock:
+  Enabled: false
 Performance/RedundantSortBlock:
+  Enabled: true
+Performance/RedundantSplitRegexpArgument:
   Enabled: true
 Performance/RedundantStringChars:
   Enabled: true
@@ -182,9 +230,21 @@ Performance/SortReverse:
   Enabled: false
 Performance/Squeeze:
   Enabled: true
+Performance/StringIdentifierArgument:
+  Enabled: true
 Performance/StringInclude:
   Enabled: true
 Performance/Sum:
+  Enabled: true
+
+
+Security/CompoundHash:
+  Enabled: true
+Security/IoMethods:
+  Enabled: true
+Security/MarshalLoad:
+  Enabled: true
+Security/YAMLLoad:
   Enabled: true
 
 
@@ -200,11 +260,11 @@ Style/ArgumentsForwarding:
   Enabled: false
 Style/ArrayCoercion:
   Enabled: true
+Style/ArrayIntersect:
+  Enabled: true
 Style/BisectedAttrAccessor:
   Enabled: true
 Style/CaseLikeIf:
-  Enabled: true
-Style/StringChars:
   Enabled: true
 Style/ClassAndModuleChildren:
   Enabled: true
@@ -214,17 +274,31 @@ Style/CollectionCompact:
   Enabled: true
 Style/CombinableLoops:
   Enabled: true
+Style/ComparableClamp:
+  Enabled: true
+Style/ConcatArrayLiterals:
+  Enabled: true
 Style/DocumentDynamicEvalDefinition:
   Enabled: true
 Style/Documentation:
   Enabled: false
 Style/DoubleNegation:
   Enabled: false
+Style/EmptyHeredoc:
+  Enabled: true
 Style/EndlessMethod:
+  Enabled: true
+Style/EnvHome:
   Enabled: true
 Style/ExplicitBlockArgument:
   Enabled: false
 Style/ExponentialNotation:
+  Enabled: true
+Style/FetchEnvVar:
+  Enabled: true
+Style/FileRead:
+  Enabled: true
+Style/FileWrite:
   Enabled: true
 Style/FormatStringToken:
   Enabled: true
@@ -253,17 +327,43 @@ Style/HashTransformValues:
   Enabled: true
 Style/IfWithBooleanLiteralBranches:
   Enabled: true
+Style/InPatternThen:
+  Enabled: true
 Style/KeywordParametersOrder:
+  Enabled: true
+Style/MagicCommentFormat:
+  Enabled: true
+Style/MapCompactWithConditionalBlock:
+  Enabled: true
+Style/MapToHash:
+  Enabled: true
+Style/MapToSet:
+  Enabled: true
+Style/MinMaxComparison:
   Enabled: true
 Style/MixinUsage:
   Enabled: true
 Style/ModuleFunction:
   Enabled: false
+Style/MultilineInPatternThen:
+  Enabled: true
 Style/MultilineTernaryOperator:
   Severity: error
 Style/NegatedIfElseCondition:
   Enabled: true
+Style/NestedFileDirname:
+  Enabled: true
 Style/NilLambda:
+  Enabled: true
+Style/NumberedParameters:
+  Enabled: true
+Style/NumberedParametersLimit:
+  Enabled: true
+Style/ObjectThen:
+  Enabled: true
+Style/OpenStructUse:
+  Enabled: true
+Style/OperatorMethodCall:
   Enabled: true
 Style/OptionalBooleanParameter:
   Enabled: true
@@ -276,13 +376,25 @@ Style/PercentLiteralDelimiters:
     "%w": "()"
     "%W": "()"
     "%x": "()"
+Style/QuotedSymbols:
+  Enabled: true
 Style/RedundantArgument:
   Enabled: true
 Style/RedundantAssignment:
   Enabled: true
+Style/RedundantConstantBase:
+  Enabled: true
+Style/RedundantDoubleSplatHashBraces:
+  Enabled: true
+Style/RedundantEach:
+  Enabled: true
 Style/RedundantFetchBlock:
   Enabled: false
 Style/RedundantFileExtensionInRequire:
+  Enabled: true
+Style/RedundantHeredocDelimiterQuotes:
+  Enabled: true
+Style/RedundantInitialize:
   Enabled: true
 Style/RedundantRegexpCharacterClass:
   Enabled: true
@@ -290,11 +402,17 @@ Style/RedundantRegexpEscape:
   Enabled: true
 Style/RedundantSelfAssignment:
   Enabled: true
+Style/RedundantSelfAssignmentBranch:
+  Enabled: true
+Style/RedundantStringEscape:
+  Enabled: true
 Style/RegexpLiteral:
   EnforcedStyle: percent_r
 Style/RescueModifier:
   Enabled: false
 Style/SafeNavigation:
+  Enabled: true
+Style/SelectByRegexp:
   Enabled: true
 Style/SignalException:
   EnforcedStyle: only_raise
@@ -303,6 +421,8 @@ Style/SingleArgumentDig:
 Style/SlicingWithRange:
   Enabled: false
 Style/SoleNestedConditional:
+  Enabled: true
+Style/StringChars:
   Enabled: true
 Style/StringConcatenation:
   Enabled: true
@@ -318,113 +438,3 @@ Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
-Gemspec/DevelopmentDependencies: # new in 1.44
-  Enabled: false # we don't care where dev dependencies are placed
-Gemspec/RequireMFA: # new in 1.23
-  Enabled: false # jekyllbot auto-releases :(
-Layout/LineContinuationLeadingSpace: # new in 1.31
-  Enabled: true
-Layout/LineContinuationSpacing: # new in 1.31
-  Enabled: true
-Layout/LineEndStringConcatenationIndentation: # new in 1.18
-  Enabled: true
-Lint/AmbiguousOperatorPrecedence: # new in 1.21
-  Enabled: true
-Lint/AmbiguousRange: # new in 1.19
-  Enabled: true
-Lint/ConstantOverwrittenInRescue: # new in 1.31
-  Enabled: true
-Lint/DuplicateMagicComment: # new in 1.37
-  Enabled: true
-Lint/EmptyInPattern: # new in 1.16
-  Enabled: true
-Lint/IncompatibleIoSelectWithFiberScheduler: # new in 1.21
-  Enabled: true
-Lint/NonAtomicFileOperation: # new in 1.31
-  Enabled: true
-Lint/RefinementImportMethods: # new in 1.27
-  Enabled: true
-Lint/RequireRangeParentheses: # new in 1.32
-  Enabled: true
-Lint/RequireRelativeSelfPath: # new in 1.22
-  Enabled: true
-Lint/UselessRescue: # new in 1.43
-  Enabled: true
-Lint/UselessRuby2Keywords: # new in 1.23
-  Enabled: true
-Naming/BlockForwarding: # new in 1.24
-  Enabled: true
-Security/CompoundHash: # new in 1.28
-  Enabled: true
-Security/IoMethods: # new in 1.22
-  Enabled: true
-Style/ArrayIntersect: # new in 1.40
-  Enabled: true
-Style/ComparableClamp: # new in 1.44
-  Enabled: true
-Style/ConcatArrayLiterals: # new in 1.41
-  Enabled: true
-Style/EmptyHeredoc: # new in 1.32
-  Enabled: true
-Style/EnvHome: # new in 1.29
-  Enabled: true
-Style/FetchEnvVar: # new in 1.28
-  Enabled: true
-Style/FileRead: # new in 1.24
-  Enabled: true
-Style/FileWrite: # new in 1.24
-  Enabled: true
-Style/InPatternThen: # new in 1.16
-  Enabled: true
-Style/MagicCommentFormat: # new in 1.35
-  Enabled: true
-Style/MapCompactWithConditionalBlock: # new in 1.30
-  Enabled: true
-Style/MapToHash: # new in 1.24
-  Enabled: true
-Style/MapToSet: # new in 1.42
-  Enabled: true
-Style/MinMaxComparison: # new in 1.42
-  Enabled: true
-Style/MultilineInPatternThen: # new in 1.16
-  Enabled: true
-Style/NestedFileDirname: # new in 1.26
-  Enabled: true
-Style/NumberedParameters: # new in 1.22
-  Enabled: true
-Style/NumberedParametersLimit: # new in 1.22
-  Enabled: true
-Style/ObjectThen: # new in 1.28
-  Enabled: true
-Style/OpenStructUse: # new in 1.23
-  Enabled: true
-Style/OperatorMethodCall: # new in 1.37
-  Enabled: true
-Style/QuotedSymbols: # new in 1.16
-  Enabled: true
-Style/RedundantConstantBase: # new in 1.40
-  Enabled: true
-Style/RedundantDoubleSplatHashBraces: # new in 1.41
-  Enabled: true
-Style/RedundantEach: # new in 1.38
-  Enabled: true
-Style/RedundantHeredocDelimiterQuotes: # new in 1.45
-  Enabled: true
-Style/RedundantInitialize: # new in 1.27
-  Enabled: true
-Style/RedundantSelfAssignmentBranch: # new in 1.19
-  Enabled: true
-Style/RedundantStringEscape: # new in 1.37
-  Enabled: true
-Style/SelectByRegexp: # new in 1.22
-  Enabled: true
-Performance/ConcurrentMonotonicTime: # new in 1.12
-  Enabled: true
-Performance/MapCompact: # new in 1.11
-  Enabled: true
-Performance/RedundantEqualityComparisonBlock: # new in 1.10
-  Enabled: true
-Performance/RedundantSplitRegexpArgument: # new in 1.10
-  Enabled: true
-Performance/StringIdentifierArgument: # new in 1.13
-  Enabled: true
