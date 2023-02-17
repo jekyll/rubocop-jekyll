@@ -11,9 +11,8 @@ AllCops:
     - vendor/**/*
     - tmp/**/*
 
-Gemspec/DateAssignment:
+Gemspec/DeprecatedAttributeAssignment:
   Enabled: true
-
 
 Layout/BeginEndAlignment:
   Enabled: true
