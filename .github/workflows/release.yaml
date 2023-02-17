@@ -4,11 +4,11 @@ name: Release Gem
 on:
   push:
     branches:
-      - main
-      - master
-      - ".*-stable"
+    - main
+    - master
+    - ".*-stable"
     paths:
-      - "lib/**/version.rb"
+    - "lib/**/version.rb"
 
 jobs:
   release:
