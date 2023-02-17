@@ -1,4 +1,8 @@
-## 0.13.0 / 2022-02-16
+## 0.13.0 / 2022-02-17
+
+### Minor Enhancements
+
+  * Bump RuboCop support to 1.45.x (#27)
 
 ### Development Fixes
 
@@ -6,10 +10,6 @@
   * Update .github/workflows/release.yaml (#26)
   * Update .github/workflows/ci.yaml (#25)
   * dependabot: use versioning-strategy: increase (#28)
-
-### Minor Enhancements
-
-  * Update rubocop requirement from ~&gt; 1.45.0 (#27)
 
 ## 0.12.0 / 2021-09-16
 
