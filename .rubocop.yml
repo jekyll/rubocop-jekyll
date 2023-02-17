@@ -318,6 +318,7 @@ Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
+
 Gemspec/DevelopmentDependencies: # new in 1.44
   Enabled: false # we don't care where dev dependencies are placed
 Gemspec/RequireMFA: # new in 1.23
