@@ -28,6 +28,8 @@ Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 Layout/EndAlignment:
   Severity: error
+Layout/EndOfLine:
+  Enabled: false # Use .gitattributes with `* text=auto` for cross-platform flexibility
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 Layout/FirstHashElementIndentation:
@@ -79,6 +81,8 @@ Lint/DuplicateElsifCondition:
   Enabled: true
 Lint/DuplicateMagicComment:
   Enabled: true
+Lint/DuplicateMatchPattern:
+  Enabled: true
 Lint/DuplicateRegexpCharacterClassElement:
   Enabled: true
 Lint/DuplicateRequire:
@@ -107,6 +111,8 @@ Lint/LambdaWithoutLiteralBlock:
   Enabled: true
 Lint/MissingSuper:
   Enabled: false
+Lint/MixedCaseRange:
+  Enabled: true
 Lint/MixedRegexpCaptureTypes:
   Enabled: false
 Lint/NestedPercentLiteral:
@@ -124,6 +130,8 @@ Lint/OutOfRangeRegexpRef:
 Lint/RaiseException:
   Enabled: true
 Lint/RedundantDirGlobSort:
+  Enabled: true
+Lint/RedundantRegexpQuantifiers:
   Enabled: true
 Lint/RedundantSafeNavigation:
   Enabled: true
@@ -174,6 +182,10 @@ Metrics/BlockLength:
     - !ruby/regexp /^spec/
 Metrics/ClassLength:
   Max: 240
+Metrics/CollectionLiteralLength:
+  Enabled: true
+Metrics/CyclomaticComplexity:
+  Max: 11
 Metrics/MethodLength:
   CountComments: false
   Max: 20
@@ -213,6 +225,8 @@ Performance/ConcurrentMonotonicTime:
 Performance/ConstantRegexp:
   Enabled: true
 Performance/MapCompact:
+  Enabled: true
+Performance/MapMethodChain:
   Enabled: true
 Performance/MethodObjectAsBlock:
   Enabled: true
@@ -278,6 +292,8 @@ Style/ComparableClamp:
   Enabled: true
 Style/ConcatArrayLiterals:
   Enabled: true
+Style/DirEmpty:
+  Enabled: true
 Style/DocumentDynamicEvalDefinition:
   Enabled: true
 Style/Documentation:
@@ -290,11 +306,15 @@ Style/EndlessMethod:
   Enabled: true
 Style/EnvHome:
   Enabled: true
+Style/ExactRegexpMatch:
+  Enabled: true
 Style/ExplicitBlockArgument:
   Enabled: false
 Style/ExponentialNotation:
   Enabled: true
 Style/FetchEnvVar:
+  Enabled: false
+Style/FileEmpty:
   Enabled: true
 Style/FileRead:
   Enabled: true
@@ -380,9 +400,13 @@ Style/QuotedSymbols:
   Enabled: true
 Style/RedundantArgument:
   Enabled: true
+Style/RedundantArrayConstructor:
+  Enabled: true
 Style/RedundantAssignment:
   Enabled: true
 Style/RedundantConstantBase:
+  Enabled: true
+Style/RedundantCurrentDirectoryInPath:
   Enabled: true
 Style/RedundantDoubleSplatHashBraces:
   Enabled: true
@@ -392,11 +416,19 @@ Style/RedundantFetchBlock:
   Enabled: false
 Style/RedundantFileExtensionInRequire:
   Enabled: true
+Style/RedundantFilterChain:
+  Enabled: true
 Style/RedundantHeredocDelimiterQuotes:
   Enabled: true
 Style/RedundantInitialize:
   Enabled: true
+Style/RedundantLineContinuation:
+  Enabled: true
+Style/RedundantRegexpArgument:
+  Enabled: true
 Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpConstructor:
   Enabled: true
 Style/RedundantRegexpEscape:
   Enabled: true
@@ -414,9 +446,13 @@ Style/SafeNavigation:
   Enabled: true
 Style/SelectByRegexp:
   Enabled: true
+Style/ReturnNilInPredicateMethodDefinition:
+  Enabled: true
 Style/SignalException:
   EnforcedStyle: only_raise
 Style/SingleArgumentDig:
+  Enabled: true
+Style/SingleLineDoEndBlock:
   Enabled: true
 Style/SlicingWithRange:
   Enabled: false
