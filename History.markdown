@@ -1,3 +1,9 @@
+## HEAD
+
+### Minor Enhancements
+
+  * Bump RuboCop support to 1.57.x (#38)
+
 ## 0.13.0 / 2022-02-17
 
 ### Minor Enhancements
