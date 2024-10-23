@@ -1,8 +1,12 @@
-## HEAD
+## 0.14.0 / 2024-10-23
 
 ### Minor Enhancements
 
   * Bump RuboCop support to 1.57.x (#38)
+
+### Development Fixes
+
+  * Release gems via GitHub Actions (#39)
 
 ## 0.13.0 / 2022-02-17
 
