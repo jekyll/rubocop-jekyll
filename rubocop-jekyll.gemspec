@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path("lib", __dir__)
+require_relative "lib/rubocop-jekyll/version"
 
 Gem::Specification.new do |s|
   s.name        = "rubocop-jekyll"
-  s.version     = "0.13.0"
+  s.version     = RuboCop::Jekyll::VERSION
   s.authors     = ["Ashwin Maroli"]
   s.email       = ["ashmaroli@gmail.com"]
   s.homepage    = "https://github.com/jekyll/rubocop-jekyll"
